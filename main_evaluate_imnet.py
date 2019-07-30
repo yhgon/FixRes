@@ -17,7 +17,7 @@ def run(input_size,architecture,weight_path,imnet_path,batch,workers,shared_fold
     shared_folder=None
     data_folder_Path=None
     if Path(str(shared_folder_path)).is_dir():
-        shared_folder=Path(shared_folder_path+"/evaluate/")
+        shared_folder=Path(shared_folder_path+"/val/")  # val instead of evaluate
     else:
         raise RuntimeError("No shared folder available")
     if Path(str(imnet_path)).is_dir():
